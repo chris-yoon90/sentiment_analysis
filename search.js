@@ -15,6 +15,7 @@ require([
             var post_box = dom.byId("post_box");
 
 			var search_text = dom.byId("search_box").value;
+            search_text = search_text.replace(/ /g,"+");
             var reddit_url = 'http://www.reddit.com/r/search/search.json?&q='+search_text;
             var search_results;
 
